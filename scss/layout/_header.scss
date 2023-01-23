@@ -1,0 +1,228 @@
+header{
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Roboto', sans-serif;
+    div{
+        margin: 10px;
+    }
+}
+nav{
+    --state-close: scale(0);
+    --state-hamburger: scale(1);
+    --state-menu: translate(-100%);
+    margin: 10px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2,1fr);
+    ul{
+        background-color: black;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 17rem;
+        display: grid;
+        gap: 50px;
+        align-content: center;
+        justify-content: center;
+        align-items: start;
+        transform: var(--state-menu);
+        transition: .3s transform;
+    } 
+    li{
+        a{
+            font-size: 20px;
+            color: white;
+        }
+        a:hover{
+            border-bottom: 3px solid white;
+            transition: .5 right;
+            cursor: pointer;
+        }
+    }
+}
+nav:target{
+    --state-menu: translate(0);
+    --state-close: scale(1);
+    --state-hamburger: scale(0);
+
+}
+.nav-hamburger, .nav-hamburger-close{
+    grid-column: -2/1;
+    grid-row: 1/2;
+    transition: .4s transform;
+}
+.nav-hamburger{
+    transform: var(--state-hamburger);
+}
+.nav-hamburger-close{
+    transform: var(--state-close);
+}
+.nike-logo-header{
+    position: absolute;
+    top: 10px;
+    margin: 0;
+    left: 50%;
+    margin-left: -46px;
+    width: fit-content;
+    img{
+        width: 100%;
+        height: 2rem;
+    }
+}
+.user-interaction-header{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    right: 0;
+    a{
+        gap: 3px;
+    }
+    img{
+        width: 80%;
+        height: 2rem;
+    }
+    p{
+        display: none;
+        color: white;
+        font-size: 12px;
+    }
+    div{
+        margin: 0;
+    }
+}
+.search{
+    grid-area: search;
+    width: 97%;
+    height: 57%;
+    margin: 10px 15px;
+    input{
+        width: 100%;
+        height: 40px;
+        border: 0;
+        font-size: 20px;
+        padding-left: 10px;
+        color: black;
+        outline: none;
+        font-family: "Futura bold";
+    }
+    input::placeholder{
+        font-size: 20px;
+        color: black;
+        font-family: "Futura-extrabold-condensed";
+    }
+    button{
+        border: none;
+        position: absolute;
+        background-color: transparent;
+        margin: 5px -36px;
+        img{
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+#mostrar{
+    background: #00e8e8;
+    width: 100%;
+    display: block;
+    height: max-content;
+}
+.favorite-notification{
+    display: none;
+    background-color: #1a1a1a;
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
+    position: absolute;
+    font-size: 7px;
+    color: white;
+    margin: 3% 0% 0 1rem;
+    text-align: center;
+    @media (min-width: 377px) {
+        width: 0.8rem;
+        height: 0.8rem;
+        margin: 2% 0% 0 1rem;
+        font-size: 9px;
+    }
+    @media (min-width: 600px){
+        margin: 0% 0% 0 1.6rem;
+    }
+    @media (min-width:992px){
+        width: 1rem;
+        height: 1rem;
+        margin: 0% 0% 0 2.6rem;
+        font-size: 12px;
+    }
+}
+@media (min-width:600px){
+    .user-interaction-header img{
+        width: 2.3rem;
+        height: 2.3rem;
+    }
+}
+@media (min-width:992px){
+    header{
+        align-items: center;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        nav ul{
+            width: 25%;
+        }
+        .nike-logo-header{
+            margin: 0;
+            position: initial;
+            img{
+                width: 100%;
+                height: 35px;
+            }
+        }
+        .search{
+            width: 57%;
+        }
+        .user-interaction-header{
+        position: initial;
+        div a{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        img{
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+        p{
+            display: initial;
+        }
+    }
+}
+}
+}
+@media (min-width:1059px){
+    user-interaction-header div a p{
+        font-size: 14px;
+    }
+}
+@media (min-width:1200px){
+    .user-interaction-header {
+        gap: 20px;
+}
+}
+@media (max-width:376px){
+    .menu img{
+        width: 25px;
+        height: 25px;
+    }
+    .nike-logo-header{
+        margin-left: -34.5px;
+        top: 13px;
+        img{
+            height: 1.5rem;
+        }
+    }
+        .user-interaction-header img{
+            width: 1.5rem;
+            height: 2rem;
+        }
+    }

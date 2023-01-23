@@ -1,0 +1,62 @@
+.main-container-favorites{
+    font-family: 'Roboto', sans-serif;;
+}
+.favorite-title-pag{
+    margin: 35px 35px 10px 35px;
+}
+.favorite-title-pag h1{
+    font-family: "Futura-extrabold-condensed";
+    color: black;
+    margin: 0;
+}
+.favorite-title-pag p{
+    padding: 10px;
+}
+.favorite-cards{
+    margin: 35px 35px 35px 35px;
+    display: flex;
+    gap: 20px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.card-background-desktop{
+    justify-self: center;
+    background-color: black;
+    width: 245px;
+    height: 300px;
+}
+.card-background-desktop:hover{
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+    cursor: pointer;
+}
+.card-background-desktop p{
+    margin: 0;
+    color: white;
+    text-align: center;
+}
+.favorite-heart-desktop{
+    width: 25px;
+    height: 25px;
+    background: transparent;
+    position: absolute;
+    margin: 12px 12px 10px 208px;
+    border: none;
+}
+.heart-icon{
+    width: 100%;
+}
+
+.card-image-desktop{
+    width: 225px;
+    height: 200px;
+    margin: 10px;
+}
+.price-card-desktop{
+    position: absolute;
+    background-color: black;
+    margin: 180px 10px 10px 15px;
+}
+.price-card-desktop p{
+    margin: 0;
+    color: white
+}

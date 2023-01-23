@@ -1,0 +1,388 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box; }
+
+p {
+  font-family: 'Roboto', sans-serif; }
+
+.container {
+  height: 100vh;
+  display: grid;
+  align-content: space-between; }
+
+body {
+  height: 100vh; }
+
+.icon {
+  width: 20px;
+  height: 20px; }
+
+.title-pag {
+  margin: 35px 35px 10px 35px; }
+
+.title-pag h1 {
+  font-family: "Futura-extrabold-condensed";
+  color: black;
+  margin: 0; }
+
+.title-pag p {
+  padding: 10px; }
+
+/* CARDS*/
+.zapatillas {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  gap: 1rem;
+  padding: 10px;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.cards {
+  margin: 35px;
+  display: flex;
+  gap: 20px;
+  justify-content: space-evenly;
+  flex-wrap: wrap; }
+
+.card-background {
+  justify-self: center;
+  background-color: black;
+  width: 245px;
+  height: 300px; }
+
+.card-background:hover {
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75); }
+
+.card-background p {
+  margin: 0;
+  color: white;
+  text-align: center; }
+
+.agregar-carrito {
+  position: absolute;
+  background-color: #131313;
+  margin-top: 16rem;
+  margin-left: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 11%;
+  cursor: pointer; }
+
+.cart-icon {
+  width: 15%; }
+
+.card-image {
+  width: 225px;
+  height: 200px;
+  margin: 10px; }
+
+.price-card {
+  position: absolute;
+  background-color: black;
+  margin: 180px 10px 10px 15px;
+  padding: 2px; }
+
+.price-card p {
+  margin: 0;
+  color: white; }
+
+@font-face {
+  font-family: "Futura-extrabold-condensed";
+  src: url("../../assets/font/Futura-Extra-Black-Condensed-Regular.otf"); }
+
+@font-face {
+  font-family: "Futura-bold";
+  src: url("../../assets/font/Futura-Bold.ttf"); }
+
+footer {
+  background-color: black;
+  font-family: 'Roboto', sans-serif; }
+  footer div {
+    margin: 10px; }
+  footer a {
+    color: white;
+    text-decoration: none; }
+
+.just-do-it {
+  text-align: center;
+  font-family: "Futura-extrabold-condensed";
+  font-size: 110px; }
+
+.redes ul {
+  display: flex;
+  gap: 10px;
+  justify-content: center; }
+  .redes ul li {
+    list-style: none; }
+
+.footersocial {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  justify-content: center; }
+  .footersocial a {
+    font-size: 17px; }
+  .footersocial img {
+    width: 40px;
+    height: 40px; }
+
+.copyright {
+  font-size: 10px;
+  text-align: center; }
+  .copyright p {
+    color: white; }
+
+@media (max-width: 400px) {
+  .just-do-it {
+    font-size: 75px; }
+  .redes a {
+    font-size: 14px; } }
+
+header {
+  background-color: black;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: 'Roboto', sans-serif; }
+  header div {
+    margin: 10px; }
+
+nav {
+  --state-close: scale(0);
+  --state-hamburger: scale(1);
+  --state-menu: translate(-100%);
+  margin: 10px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr); }
+  nav ul {
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 17rem;
+    display: grid;
+    gap: 50px;
+    align-content: center;
+    justify-content: center;
+    align-items: start;
+    transform: var(--state-menu);
+    transition: .3s transform; }
+  nav li a {
+    font-size: 20px;
+    color: white; }
+  nav li a:hover {
+    border-bottom: 3px solid white;
+    transition: .5 right;
+    cursor: pointer; }
+
+nav:target {
+  --state-menu: translate(0);
+  --state-close: scale(1);
+  --state-hamburger: scale(0); }
+
+.nav-hamburger, .nav-hamburger-close {
+  grid-column: -2/1;
+  grid-row: 1/2;
+  transition: .4s transform; }
+
+.nav-hamburger {
+  transform: var(--state-hamburger); }
+
+.nav-hamburger-close {
+  transform: var(--state-close); }
+
+.nike-logo-header {
+  position: absolute;
+  top: 10px;
+  margin: 0;
+  left: 50%;
+  margin-left: -46px;
+  width: fit-content; }
+  .nike-logo-header img {
+    width: 100%;
+    height: 2rem; }
+
+.user-interaction-header {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  right: 0; }
+  .user-interaction-header a {
+    gap: 3px; }
+  .user-interaction-header img {
+    width: 80%;
+    height: 2rem; }
+  .user-interaction-header p {
+    display: none;
+    color: white;
+    font-size: 12px; }
+  .user-interaction-header div {
+    margin: 0; }
+
+.search {
+  grid-area: search;
+  width: 97%;
+  height: 57%;
+  margin: 10px 15px; }
+  .search input {
+    width: 100%;
+    height: 40px;
+    border: 0;
+    font-size: 20px;
+    padding-left: 10px;
+    color: black;
+    outline: none;
+    font-family: "Futura bold"; }
+  .search input::placeholder {
+    font-size: 20px;
+    color: black;
+    font-family: "Futura-extrabold-condensed"; }
+  .search button {
+    border: none;
+    position: absolute;
+    background-color: transparent;
+    margin: 5px -36px; }
+    .search button img {
+      width: 30px;
+      height: 30px; }
+
+#mostrar {
+  background: #00e8e8;
+  width: 100%;
+  display: block;
+  height: max-content; }
+
+.favorite-notification {
+  display: none;
+  background-color: #1a1a1a;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  position: absolute;
+  font-size: 7px;
+  color: white;
+  margin: 3% 0% 0 1rem;
+  text-align: center; }
+  @media (min-width: 377px) {
+    .favorite-notification {
+      width: 0.8rem;
+      height: 0.8rem;
+      margin: 2% 0% 0 1rem;
+      font-size: 9px; } }
+  @media (min-width: 600px) {
+    .favorite-notification {
+      margin: 0% 0% 0 1.6rem; } }
+  @media (min-width: 992px) {
+    .favorite-notification {
+      width: 1rem;
+      height: 1rem;
+      margin: 0% 0% 0 2.6rem;
+      font-size: 12px; } }
+
+@media (min-width: 600px) {
+  .user-interaction-header img {
+    width: 2.3rem;
+    height: 2.3rem; } }
+
+@media (min-width: 992px) {
+  header {
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-around; }
+    header nav ul {
+      width: 25%; }
+    header .nike-logo-header {
+      margin: 0;
+      position: initial; }
+      header .nike-logo-header img {
+        width: 100%;
+        height: 35px; }
+    header .search {
+      width: 57%; }
+    header .user-interaction-header {
+      position: initial; }
+      header .user-interaction-header div a {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        header .user-interaction-header div a img {
+          width: 2.5rem;
+          height: 2.5rem; }
+        header .user-interaction-header div a p {
+          display: initial; } }
+
+@media (min-width: 1059px) {
+  user-interaction-header div a p {
+    font-size: 14px; } }
+
+@media (min-width: 1200px) {
+  .user-interaction-header {
+    gap: 20px; } }
+
+@media (max-width: 376px) {
+  .menu img {
+    width: 25px;
+    height: 25px; }
+  .nike-logo-header {
+    margin-left: -34.5px;
+    top: 13px; }
+    .nike-logo-header img {
+      height: 1.5rem; }
+  .user-interaction-header img {
+    width: 1.5rem;
+    height: 2rem; } }
+
+html,
+body {
+  position: relative;
+  height: 100%; }
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0; }
+
+.swiper {
+  width: 100%;
+  height: 100%; }
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center; }
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; }
+
+.nombre-zapatilla {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  font-size: 2rem;
+  font-family: "Futura-extrabold-condensed"; }

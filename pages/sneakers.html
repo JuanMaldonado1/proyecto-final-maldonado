@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneakers - Sitio web de Nike</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <meta name="author" content="Juan Maldonado">
+    <meta name="description" content="Ésta es la pagina de sneakers del sitio no oficial de Nike©, donde podrás ver los sneakers más recientes.">
+    <link rel="shortcut icon" href="../assets/svg/nike.svg" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav id="nav">
+                <ul class="nav-ul">
+                    <li><a href="../pages/zapatillas.html" class="links">Sneakers</a></li>
+                </ul>
+                <a href="#nav" class="nav-hamburger">
+                    <img src="../assets/svg/menu-ham.svg" alt="Abrir menu de navegación">
+                </a>
+                <a href="#" class="nav-hamburger-close">
+                    <img src="../assets/svg/menu-ham-close.svg" alt="Cerrar menu de navegación">
+                </a>
+            </nav>
+            <div class="nike-logo-header">
+                <a href="../index.html"><img src="../assets/svg/nikebig.svg" alt="logo de Nike"></a>
+            </div>
+            <div class="search">
+                <form action="">
+                    <label for="search">
+                        <input type="text" id="search" class="search-bar" placeholder="Buscar...">
+                        <button type="search" class="search-icon"><img src="../assets/svg/buscador.svg" alt="Realizar busqueda"></button>
+                    </label>
+                </form>
+            </div>
+            <div class="user-interaction-header">
+                <div>
+                    <a href="./user.html"><img src="../assets/svg/user.svg" alt="Tú cuenta"><p>Mi Cuenta</p></a>
+                </div>
+                <div>
+                    <span class="favorite-notification" id="notificationNumber"></span>
+                    <a href="./cart.html"><img src="../assets/svg/cart.svg" alt="Tú carrito"><p>Tu Carrito</p></a>
+                </div>
+            </div>
+        </header>
+        <main>
+            <article class="title-pag">
+                <h1>Zapatillas</h1>
+                <p>Nuevos resultados.</p>
+            </article>
+            <div class="zapatillas" id="containerCards">
+            </div>
+        </main>
+        <footer>
+            <div class="just-do-it">
+                <a>JUST DO IT.</a>
+            </div>
+            <div class="redes">
+                <ul>
+                    <li><a href="https://www.nike.com/ar/retail" target="_blank" alt="Tiendas de Nike en tu zona">Locales más cercanos</a></li>
+                    <li><a href="https://www.nike.com/ar/tiendas" target="_blank" alt="Todas las tiendas de Nike">Tiendas</a></li>
+                    <li><a href="https://about.nike.com/en/newsroom" target="_blank" alt="Noticias sobre Nike">Noticias</a></li>
+                    <li><a href="https://www.nike.com/ar/membresia" target="_blank" alt="Únite a Nike">Unite</a></li>
+                </ul>
+            </div>
+            <div class="footersocial">
+                <a href="https://www.facebook.com/nike" target="_blank"><img src="../assets/svg/facebook.svg" alt="Red social de Facebook de Nike"></a>
+                <a href="https://twitter.com/nike" target="_blank"><img src="../assets/svg/twitter.svg" alt="Red social de Twitter de Nike"></a>
+                <a href="https://www.instagram.com/nike/" target="_blank"><img src="../assets/svg/instagram.svg" alt="Red social de Instagram de Nike"></a>
+                <a href="https://www.youtube.com/nike" target="_blank"><img src="../assets/svg/youtube.svg" alt="Red social de Youtube de Nike"></a>
+            </div>
+            <div class="copyright" alt="Copyright"><p>© 2022 Nike, Inc. Todos los derechos reservados.</p></div>
+        </footer>
+    </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="../js/zapatillas.js"></script>
+    <script src="../js/sneakers.js"></script>
+</body>
+</html>
