@@ -12,4 +12,3 @@ deslizante.addEventListener('click', ()  => {
 });
 
 seleccionarTema(localStorage.getItem('tema') || colorDelSistema);
-const swiper = new Swiper(".mySwiper", {});

@@ -15,6 +15,61 @@ nav{
     display: grid;
     align-items: center;
     grid-template-columns: repeat(2,1fr);
+    grid-template-areas: "hamburger label";
+    [tema-colores="oscuro"]{
+        ---background: #000000fc;
+        ---color: white;
+        ---switch: #282828cc;
+    }
+    [tema-colores="claro"]{
+        ---background: ##f6f6f6;
+        ---color: black;
+        ---switch: ##adadad;
+    }
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+        grid-area: label;
+    }
+    .switch input { 
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(---switch);
+        -webkit-transition: .4s;
+        transition: .4s;
+        border-radius: 34px;
+    }
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: rgb(255, 255, 255);
+        -webkit-transition: .4s;
+        transition: .4s;
+        border-radius: 50%;
+    }
+    input:checked + .slider {
+        background-color: var(---switch);
+    }
+    input:checked + .slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+    }
     ul{
         background-color: black;
         position: absolute;
@@ -29,6 +84,7 @@ nav{
         align-items: start;
         transform: var(--state-menu);
         transition: .3s transform;
+        z-index: 1;
     } 
     li{
         a{
@@ -52,9 +108,12 @@ nav:target{
     grid-column: -2/1;
     grid-row: 1/2;
     transition: .4s transform;
+    z-index: 2;
+    position: absolute;
 }
 .nav-hamburger{
     transform: var(--state-hamburger);
+    grid-area: hamburger;
 }
 .nav-hamburger-close{
     transform: var(--state-close);

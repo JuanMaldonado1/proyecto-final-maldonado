@@ -1,0 +1,11 @@
+.botones{
+    margin: 10px 35px 10px 35px;
+}
+.btn-order{
+    border: 1px solid black;
+    padding: 0.3rem;
+}
+    .btn-order:hover{
+        transform: scale(1.05);
+        box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
+    }

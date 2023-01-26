@@ -1,0 +1,35 @@
+.container-contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 1rem;
+}
+.container-input{
+    font-family: "Futura-bold";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.input-info{
+    font-family: "Futura-extrabold-condensed";
+    font-size: 1.2rem;
+}
+.input-contact{
+    border: none;
+    background: #f6f6f6;
+    text-align: center;
+    border-bottom: 1px solid;
+    padding: 5px;
+    outline: none;
+}
+.textarea{
+    outline: none;
+    resize: none;
+    width: 25rem;
+    height: 13rem;
+    text-align: center;
+    background-color: #f6f6f6;
+    font-size: 14px;
+}

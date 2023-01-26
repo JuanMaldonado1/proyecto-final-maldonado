@@ -2,13 +2,23 @@ html,
       body {
         position: relative;
         height: 100%;
+        
       }
-
+      [tema-colores="oscuro"]{
+        ---background: #000000fc;
+        ---color: white;
+        ---switch: #282828cc;
+    }
+    [tema-colores="claro"]{
+        ---background: ##f6f6f6;
+        ---color: black;
+        ---switch: #adadad;
+    }
       body {
-        background: #eee;
+        background: var(---background);
         font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
         font-size: 14px;
-        color: #000;
+        color: var(---color);
         margin: 0;
         padding: 0;
       }
@@ -46,8 +56,52 @@ html,
       }
       .nombre-zapatilla{
         position: absolute;
+        color: black;
     left: 1rem;
     bottom: 1rem;
     font-size: 2rem;
     font-family: "Futura-extrabold-condensed";
       }
+      .novedades{
+        font-family: "Futura-extrabold-condensed";    
+        display: flex;
+        justify-content: center;
+        font-size: 2.5rem;
+      }
+      .airforce-uno {
+        background-image: url("../../assets/img/principal.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: grid;
+        grid-template-columns: repeat(2, 20%);
+        grid-template-rows: repeat(2, 50%);
+        justify-content: space-between;
+        justify-items: stretch; }
+        .airforce-uno img {
+          width: 100%; }
+        @media (min-width: 992px) {
+          .airforce-uno {
+            grid-template-columns: repeat(2, 155px);
+            grid-template-rows: repeat(2, 155px); }
+            .airforce-uno img {
+              width: 155px; } }
+        @media (min-width: 1200px) {
+          .airforce-uno {
+            background-color: #f6f6f6;
+            background-size: auto; } }
+      
+      .airforce-uno-text {
+        margin: 15px; }
+        .airforce-uno-text h2 {
+          font-family: "Futura-extrabold-condensed";
+          text-align: center;
+          font-size: 45px; }
+        .airforce-uno-text p {
+          text-align: center;
+          font-size: 25px; }
+        @media (min-width: 992px) {
+          .airforce-uno-text h2 {
+            font-size: 60px; }
+          .airforce-uno-text p {
+            font-size: 35px; } }

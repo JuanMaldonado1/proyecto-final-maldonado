@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sneakers - Sitio web de Nike</title>
+    <title>Contacto - Sitio web de Nike</title>
     <link rel="stylesheet" href="../css/style.css">
     <meta name="author" content="Juan Maldonado">
-    <meta name="description" content="Ésta es la pagina de sneakers del sitio no oficial de Nike©, donde podrás ver los sneakers más recientes.">
+    <meta name="description" content="Ésta es la pagina de contacto del sitio no oficial de Nike©, donde nos podras dejar mensajes que nosotros responderemos.">
     <link rel="shortcut icon" href="../assets/svg/nike.svg" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
@@ -50,16 +50,24 @@
             </div>
         </header>
         <main>
-            <article class="title-pag">
-                <h1>Zapatillas</h1>
-                <p>Nuevos resultados.</p>
-            </article>
-            <article class="botones">
-                <button class="btn-order" id="porNombre">Ordenar de A-Z</button>
-                <button class="btn-order" id="porPrecio">Ordenar por precio ascedente</button>
-            </article>
-            <div class="zapatillas" id="containerCards">
+            <h1 class="novedades">Contactanos</h1>
+            <section class="container-contact">
+            <div class="container-input">
+                <p class="input-info">Email</p>
+                <input type="email" placeholder="Escribe tu email" id="" class="input-contact">
             </div>
+            <div class="container-input">
+                <p class="input-info">Nombre</p>
+                <input type="text" placeholder="Escribe tu nombre" id="" class="input-contact">
+            </div>
+            <div class="container-input">
+                <p class="input-info">¿Qué quieres decirnos?</p>
+                <textarea placeholder="Escribe tu mensaje" id="" class="textarea"></textarea>
+            </div>
+            <div class="container-input">
+                <button type="submit" class="btn-order">Enviar</button>
+            </div>
+            </section>
         </main>
         <footer>
             <div class="just-do-it">
@@ -81,7 +89,6 @@
             </div>
             <div class="copyright" alt="Copyright"><p>© 2022 Nike, Inc. Todos los derechos reservados.</p></div>
         </footer>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-    <script src="../js/sneakers.js"></script>
+    <script src="../js/contact.js"></script>
 </body>
 </html>
