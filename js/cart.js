@@ -11,7 +11,8 @@ const cards = ( array ) => {
             <div class="price-card">
                 <p class="sneaker-price">$${e.precio}</p>
             </div>
-            <button class="agregar-carrito" id="${e.id}"><p>Sacar del carrito</p><img src="../assets/svg/carrito-de-compras.svg" class="cart-icon"></button>
+            <button class="sacar-carrito" id="${e.id}"><img src="../assets/svg/eliminar.svg"></button>
+            <button class="agregar-carrito" id="${e.id}"><p>¡Comprar!</p><img src="../assets/svg/carrito-de-compras.png" class="cart-icon"></button>
             <img src=".${e.img}" class="card-image" alt="${e.producto}">
             <p class="sneaker-name">${e.producto}</p>
         </div>
@@ -22,8 +23,22 @@ const cards = ( array ) => {
 const containerCards = document.getElementById("containerCards")
 containerCards.innerHTML = cards(traerLS("Tu carrito"))
 
+const comprar = () => {
+    const comprarBtn = document.querySelectorAll(".agregar-carrito");
+    comprarBtn.forEach( e => {
+        e.onclick = () => {
+            const alerta = confirm("¿Seguro quiere comprar este producto?")
+            if (alerta === true) {
+                alert("¡Comprado!")
+            } else {
+                alert("Compra cancelada.")
+            }
+        }
+    })
+}
+comprar()
 const quitarCarrito = () => {
-    const seleccionCarrito = document.querySelectorAll(".agregar-carrito")
+    const seleccionCarrito = document.querySelectorAll(".sacar-carrito")
     seleccionCarrito.forEach( e => {
         e.onclick = () => {          
         const filtrar = carrito.filter( (filtrado, i) => {

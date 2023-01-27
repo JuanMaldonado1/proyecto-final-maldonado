@@ -52,21 +52,23 @@
         <main>
             <h1 class="novedades">Contactanos</h1>
             <section class="container-contact">
-            <div class="container-input">
-                <p class="input-info">Email</p>
-                <input type="email" placeholder="Escribe tu email" id="" class="input-contact">
-            </div>
-            <div class="container-input">
-                <p class="input-info">Nombre</p>
-                <input type="text" placeholder="Escribe tu nombre" id="" class="input-contact">
-            </div>
-            <div class="container-input">
-                <p class="input-info">¿Qué quieres decirnos?</p>
-                <textarea placeholder="Escribe tu mensaje" id="" class="textarea"></textarea>
-            </div>
-            <div class="container-input">
-                <button type="submit" class="btn-order">Enviar</button>
-            </div>
+            <form action="contacto" id="form">
+                <div class="container-input">
+                    <p class="input-info">Email</p>
+                    <input type="email" placeholder="Escribe tu email" id="email" class="input-contact">
+                </div>
+                <div class="container-input">
+                    <p class="input-info">Nombre</p>
+                    <input type="text" placeholder="Escribe tu nombre" id="name" class="input-contact">
+                </div>
+                <div class="container-input">
+                    <p class="input-info">¿Qué quieres decirnos?</p>
+                    <textarea placeholder="Escribe tu mensaje" id="message" class="textarea"></textarea>
+                </div>
+                <div class="container-input">
+                    <input type="submit" class="btn-order" id="submit" value="Enviar">
+                </div>
+            </form>
             </section>
         </main>
         <footer>

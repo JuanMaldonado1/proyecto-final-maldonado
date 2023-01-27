@@ -5,7 +5,6 @@ const containerCards = document.getElementById("containerCards")
 fetch("../js/sneakers.json")
     .then(response => response.json())
     .then(data => {
-        
         data.forEach( e => {
         div = document.createElement("div")
         div.innerHTML += `
@@ -46,7 +45,38 @@ fetch("../js/sneakers.json")
         agregarAlCarrito()
         const carritoSeleccionados = traerLS("Tu carrito") || []
         carrito = carritoSeleccionados
-    })
+        const porNombre = document.getElementById("porNombre")
+        const porPrecio = document.getElementById("porPrecio")
+        porNombre.onclick = () => {
+                const zapatillasOrdenasPorNombre = data.slice()
+                zapatillasOrdenasPorNombre.sort( ( a, b )  => {
+                if ( a.producto < b.producto ){
+                    return -1
+                } else if ( a.producto > b.producto ){
+                    return 1
+                } else {
+                    return 0
+                }
+                })
+                zapatillasOrdenasPorNombre.innerHTML;
+                console.log(zapatillasOrdenasPorNombre);
+            }
+            porPrecio.onclick = () => {
+                const zapatillasOrdenasPorPrecio = data.slice()
+                zapatillasOrdenasPorPrecio.sort( ( a, b )  => {
+                if ( a.precio < b.precio ){
+                    return -1
+                } else if ( a.precio > b.precio ){
+                    return 1
+                } else {
+                    return 0
+                }
+                })
+                zapatillasOrdenasPorPrecio.innerHTML;
+                console.log(zapatillasOrdenasPorPrecio);
+            }
+        }
+    )
 
 const subirLS = ( clave, valor ) => {
     return localStorage.setItem(clave, JSON.stringify(valor))
