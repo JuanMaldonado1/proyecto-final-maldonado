@@ -27,15 +27,29 @@ const comprar = () => {
     const comprarBtn = document.querySelectorAll(".agregar-carrito");
     comprarBtn.forEach( e => {
         e.onclick = () => {
-            const alerta = confirm("¿Seguro quiere comprar este producto?")
-            if (alerta === true) {
-                alert("¡Comprado!")
-            } else {
-                alert("Compra cancelada.")
-            }
-        }
-    })
-}
+            Swal.fire({
+                title: '¿Seguro quiere comprar este producto?',
+                icon: 'question',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: '¡Si, comprar!',
+                cancelButtonText: 'No, aún no'
+              }).then((result) => {
+                if (result.isConfirmed) {
+                  Swal.fire(
+                    '¡Comprado!',
+                    'Tu compra fue procesada.',
+                    'Revisa tu Email.'
+                  )} else if (result.isDenied){
+                    Swal.fire (
+                        'Tu compra fue cancelada.'
+                    )
+                  }
+                })
+                }}
+            )}
+
 comprar()
 const quitarCarrito = () => {
     const seleccionCarrito = document.querySelectorAll(".sacar-carrito")

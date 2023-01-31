@@ -31,7 +31,11 @@ const form = document.getElementById("form")
 form.onsubmit = (e) => {
     e.preventDefault()
     if (Email.value === "" || Name.value === "" || Message.value === "") {
-        alert("Debes completar todos los campos.")
+        Swal.fire({
+            icon: 'error',
+            title: 'Un error ha ocurrido...',
+            text: 'Asegurate de rellenar todos los campos.',
+          })
     } else {
         mensajeria.push({
             Email: Email.value,
